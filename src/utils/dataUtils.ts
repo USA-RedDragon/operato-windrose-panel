@@ -5,18 +5,15 @@ export function extractData(data: PanelData) {
     if(data.series.length === 0) {
         return { direction: [], speed: [] }
     }
-    let weatherData = data.series[0];
 
-    let speed: number[] = [];
-    let direction: number[] = [];
+    let windSpeedSeries = data.series.find((series) => series.refId === 'wind_speed')
+    let windDirectionSeries = data.series.find((series) => series.refId === 'wind_direction')
 
-    for (let i = 0; i < weatherData.fields[0].values.length; i++) {
-        for (let j = 0; j < weatherData.fields.length; j++) {
-            let field = weatherData.fields[j];
-            if (field.name === 'wind_speed') { speed.push(field.values.get(i)); }
-            if (field.name === 'wind_direction') { direction.push(field.values.get(i)); }
-        }
-    }
+    let windSpeed = windSpeedSeries?.fields.find((field) => field.type !== 'time');
+    let windDirection = windDirectionSeries?.fields.find((field) => field.type !== 'time');
+
+    let speed: number[] = windSpeed?.values.toArray() || [];
+    let direction: number[] = windDirection?.values.toArray() || [];
 
     const windDataFrame: { direction: number[], speed: number[] } = {
         direction: direction,
@@ -89,7 +86,6 @@ export function calculateWindroseData(windData: WindData, bucketsPer90Deg: numbe
             containedDataRatio: buckets[i].length/dataPointsCount
         });
     }
-
 
     windroseData.petalBuckets.forEach((petalBucket) => {
         petalBucket.speedBuckets.forEach((speedBucket) => {

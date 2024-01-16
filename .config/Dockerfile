@@ -1,7 +1,4 @@
-ARG grafana_version=latest
-ARG grafana_image=grafana-enterprise
-
-FROM grafana/${grafana_image}:${grafana_version}
+FROM grafana/grafana-enterprise:10.0.10
 
 # Make it as simple as possible to access the grafana instance for development purposes
 # Do NOT enable these settings in a public facing / production grafana instance

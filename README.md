@@ -7,7 +7,7 @@
 If you want to build the plugin to install it manually you can run the command:
 
 ``` bash 
-yarn build
+npm run build
 ```
 
 Since Grafana requires all plugins to be signed (unles you are running Grafana in development mode or you specify to load unsigned plugins) you will need to sign the plugin before you will be able to install it. Here is a short `bash` script to sign the plugin. You will need to input your Grafana API key and the URL address your grafana is running on (you can also input multiple adresses):

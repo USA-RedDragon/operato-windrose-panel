@@ -1,4 +1,4 @@
-FROM grafana/grafana-enterprise:10.0.10
+FROM grafana/grafana-enterprise:10.2.3
 
 # Make it as simple as possible to access the grafana instance for development purposes
 # Do NOT enable these settings in a public facing / production grafana instance

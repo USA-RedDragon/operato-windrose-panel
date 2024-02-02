@@ -28,7 +28,7 @@
     "@swc/helpers": "^0.5.3",
     "@swc/jest": "^0.2.31",
     "@testing-library/jest-dom": "^6.4.1",
-    "@testing-library/react": "^14.2.0",
+    "@testing-library/react": "^14.2.1",
     "@types/glob": "^8.1.0",
     "@types/jest": "^29.5.12",
     "@types/lodash": "^4.14.202",

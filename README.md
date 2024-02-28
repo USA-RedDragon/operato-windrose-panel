@@ -1,6 +1,15 @@
-
-
 # Operato Windrose Grafana Panel <img src="./src/img/operato-windrose-logo.svg" width=32>
+
+> [!IMPORTANT]
+>
+> ## This is a fork
+>
+> This is a fork which only supports Prometheus and has stricter dependency verison pinning enabled with [Renovate](https://github.com/apps/renovate)
+> managing them. If you've stumbled upon this repository, you probably want the upstream repository which can be
+> found at <https://git.operato.eu/open-source/operato-windrose-panel/>.
+>
+> No support is offered for any usecase
+
 
 ## How to build the plugin?
 

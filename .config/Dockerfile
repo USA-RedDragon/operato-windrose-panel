@@ -1,4 +1,4 @@
-FROM grafana/grafana-enterprise:11.1.3
+FROM grafana/grafana-enterprise:13.2.4@sha256:18b723df0d73f5861f8079afd4b31d22c68b9d1babc7b55c2dace57bde49b6ba
 
 # Make it as simple as possible to access the grafana instance for development purposes
 # Do NOT enable these settings in a public facing / production grafana instance
